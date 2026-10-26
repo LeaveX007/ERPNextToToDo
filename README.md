@@ -40,6 +40,9 @@ Das Projekt minimiert den Integrationsaufwand zwischen Drittsystemen und ERPNext
 
 - **JDK 21** oder höher
 - Eine laufende **ERPNext**-Instanz mit aktivierter REST-API und passendem API-Token
+- **ERPNext**-Instanz horcht auf port 80
+- **ERPNext**-Instanz url lautet: site2.local
+> **Hinweis zur Sicherheit für ERPNext:** Für Produktivumgebungen ist zwingend https erforderlich.
 
 ---
 

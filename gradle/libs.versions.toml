@@ -1,21 +1,14 @@
 [versions]
-koin = "4.2.2"
 koin-plugin = "1.2.1"
 kotlin = "2.4.0"
 logback = "1.6.3"
 mockito = "6.4.0"
 
 [libraries]
-koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
-koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin" }
-koin-loggerSlf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
-koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
-koin-test-junit5 = { module = "io.insert-koin:koin-test-junit5", version.ref = "koin" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 koin-compiler = { id = "io.insert-koin.compiler.plugin", version.ref = "koin-plugin" }

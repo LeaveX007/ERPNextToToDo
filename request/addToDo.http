@@ -5,7 +5,7 @@ POST http://127.0.0.1:8080/
 Content-Type: application/json
 
 {
-  "description": "Mein Youtube Todo zum Test"
+  "description": "Mein Youtussbe Todo zum Test"
 }
 
 ###

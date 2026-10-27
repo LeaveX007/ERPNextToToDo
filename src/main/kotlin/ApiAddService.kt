@@ -1,19 +1,26 @@
 import io.ktor.client.*
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.*
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.*
-import kotlinx.serialization.json.Json
+import io.ktor.serialization.kotlinx.json.json
+
+val httpClient = HttpClient(CIO) {
+    install(ContentNegotiation) {
+        json()
+    }
+}
 
 class ApiAddService {
 
     suspend fun add(
-        client: HttpClient,
         url: String,
         docType: String,
         toDo: ToDo,
         token: String
     ): HttpResponse {
-        return client.post {
+        return httpClient.post {
             url {
                 protocol = URLProtocol.HTTP
                 host = url

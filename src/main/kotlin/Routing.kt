@@ -9,17 +9,18 @@ import io.ktor.server.response.respond
 import io.ktor.server.routing.*
 import kotlinx.serialization.json.Json
 
+val httpClient = HttpClient(CIO) {
+    install(ContentNegotiation) {
+        json()
+    }
+}
+
 fun Application.configureRouting() {
     routing {
         post("/") {
             val toDoText = call.receiveText()
             val toDo = Json.decodeFromString<ToDo>(toDoText)
             val apiAddService = ApiAddService()
-            val httpClient = HttpClient(CIO) {
-                install(ContentNegotiation) {
-                    json()
-                }
-            }
             apiAddService.add(
                 httpClient,
                 "site2.local",

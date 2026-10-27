@@ -1,6 +1,8 @@
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.HttpStatusCode
+import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.*
 import io.ktor.server.request.receiveText
 import io.ktor.server.response.respond
@@ -13,7 +15,11 @@ fun Application.configureRouting() {
             val toDoText = call.receiveText()
             val toDo = Json.decodeFromString<ToDo>(toDoText)
             val apiAddService = ApiAddService()
-            val httpClient = HttpClient(CIO)
+            val httpClient = HttpClient(CIO) {
+                install(ContentNegotiation) {
+                    json()
+                }
+            }
             apiAddService.add(
                 httpClient,
                 "site2.local",

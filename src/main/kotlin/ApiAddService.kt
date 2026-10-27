@@ -26,7 +26,7 @@ class ApiAddService {
                     ContentType.Application.Json
                 )
             }
-            setBody(Json.encodeToString(toDo))
+            setBody(toDo)
         }
     }
 

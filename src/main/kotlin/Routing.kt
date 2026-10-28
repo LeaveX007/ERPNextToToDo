@@ -17,7 +17,7 @@ fun Application.configureRouting() {
                 toDo,
                 "228cc2946f6f330:e53dd148aca809c"
             )
-            call.respond(HttpStatusCode.OK, "Todo successfully added.")
+            call.respond(HttpStatusCode.OK, "Todo erfolgreich erzeugt")
         }
     }
 }

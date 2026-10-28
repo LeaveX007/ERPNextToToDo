@@ -123,7 +123,7 @@ Sobald der Server gestartet ist, ist er standardmäßig unter `http://localhost:
 #### Request Body
 ```json
 {
-  "description": "Mein krasses Youtube Todo"
+  "description": "Mein Youtube Todo"
 }
 ```
 

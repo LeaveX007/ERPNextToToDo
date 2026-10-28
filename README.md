@@ -129,7 +129,7 @@ Sobald der Server gestartet ist, ist er standardmäßig unter `http://localhost:
 
 #### Response
 - **Status:** `200 OK`
-- **Body:** `Todo successfully added.`
+- **Body:** `Todo erfolgreich erzeugt`
 
 #### HTTP-Testdatei
 Im Projekt liegt eine fertige Request-Datei unter `request/addToDo.http`, die direkt in IntelliJ IDEA / HTTP-Clients ausgeführt werden kann:

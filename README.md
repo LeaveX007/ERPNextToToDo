@@ -137,7 +137,7 @@ Im Projekt liegt eine fertige Request-Datei unter `request/addToDo.http`, die di
 POST http://127.0.0.1:8080/
 Content-Type: application/json
 
-{"description":"Mein krasses Youtube Todo"}
+{"description":"Mein Youtube Todo zum Test"}
 ```
 
 ---
